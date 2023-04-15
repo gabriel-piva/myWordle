@@ -269,11 +269,15 @@ const colorVerification = () => {
         }
         if(wordColors[i] == 'Y') {
             lineArray[i].classList.add('yellow');
-            document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('yellow');
+            if(!document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.contains('green')) {
+                document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('yellow');
+            }
         }
         if(wordColors[i] == 'B') {
             lineArray[i].classList.add('black');
-            document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('black');
+            if(!document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.contains('yellow')) {
+                document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('black');
+            }
         }
     }
     wordColors = []; 
