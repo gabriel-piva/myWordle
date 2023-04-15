@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <title>MyWordle</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="icon" id="aboutIcon"><i class='bx bx-question-mark'></i></div>
+                <span>MyWordle</span>
+                <div class="icon" id="statsIcon"><i class='bx bx-stats'></i></div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="game">
+                    <div class="line selected" id="line1">
+                        <div class="letter selected"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                    </div>
+                    <div class="line hidden" id="line2">
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                    </div>
+                    <div class="line hidden" id="line3">
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                    </div>
+                    <div class="line hidden" id="line4">
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                    </div>
+                    <div class="line hidden" id="line5">
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                    </div>
+                    <div class="line hidden" id="line6">
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                        <div class="letter"></div>
+                    </div>
+                </div>
+                <div class="keyboard">
+                    <div class="kbdLine">
+                        <div id="kbd_q" class="kbdButton key">Q</div>
+                        <div id="kbd_w" class="kbdButton key">W</div>
+                        <div id="kbd_e" class="kbdButton key">E</div>
+                        <div id="kbd_r" class="kbdButton key">R</div>
+                        <div id="kbd_t" class="kbdButton key">T</div>
+                        <div id="kbd_y" class="kbdButton key">Y</div>
+                        <div id="kbd_u" class="kbdButton key">U</div>
+                        <div id="kbd_i" class="kbdButton key">I</div>
+                        <div id="kbd_o" class="kbdButton key">O</div>
+                        <div id="kbd_p" class="kbdButton key">P</div>
+                    </div>
+                    <div class="kbdLine">
+                        <div id="kbd_a" class="kbdButton key">A</div>
+                        <div id="kbd_s" class="kbdButton key">S</div>
+                        <div id="kbd_d" class="kbdButton key">D</div>
+                        <div id="kbd_f" class="kbdButton key">F</div>
+                        <div id="kbd_g" class="kbdButton key">G</div>
+                        <div id="kbd_h" class="kbdButton key">H</div>
+                        <div id="kbd_j" class="kbdButton key">J</div>
+                        <div id="kbd_k" class="kbdButton key">K</div>
+                        <div id="kbd_l" class="kbdButton key">L</div>
+                        <div class="kbdButton back" id="kbdBack">
+                            <i class='bx bxs-left-arrow-alt'></i>
+                        </div>
+                    </div>
+                    <div class="kbdLine">
+                        <div id="kbd_z" class="kbdButton key">Z</div>
+                        <div id="kbd_x" class="kbdButton key">X</div>
+                        <div id="kbd_c" class="kbdButton key">C</div>
+                        <div id="kbd_v" class="kbdButton key">V</div>
+                        <div id="kbd_b" class="kbdButton key">B</div>
+                        <div id="kbd_n" class="kbdButton key">N</div>
+                        <div id="kbd_m" class="kbdButton key">M</div>
+                        <div class="kbdButton enter" id="kbdEnter">ENTER</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                &#169 Gabriel Piva Pereira
+                <div class="links">
+                    <a target="_blank" href="https://github.com/gpiiva"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/gabriel-piva/"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+            </div>
+        </footer>
+        <div class="modal">
+            <div class="modalContainer">
+                <div class="modalHeader">
+                    <i class='bx bx-x' id="closeModalX"></i>
+                </div>
+                <div class="modalContent">
+                </div>
+            </div>
+        </div>
+    <script type="module" src="js/app.js"></script>
+    </body>
+</html>
