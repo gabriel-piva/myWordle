@@ -80,6 +80,14 @@ const getActiveLineArray = () => {
     }
     return null;
 }
+const getCurrentWordArray = () => {
+    let lineSelected = getActiveLineArray();
+    const currentWord = [];
+    for(let i = 0; i < lineSelected.length; i++){
+        currentWord[i] = lineSelected[i].innerHTML;
+    }
+    return currentWord;
+}
 const lineSelectionFree = () => {
     document.querySelectorAll('.line').forEach(line => {
         line.classList.remove('selected');
@@ -216,26 +224,67 @@ const deleteLetter = () => {
 
 // --------------------------------------------------------------------------
 
-// Submit Word Attempt
+// Color Verification
 
-let attemptCounter = 0;
+let attemptWord;
+let lineArray;
+let wordClone;
+let wordColors = [];
 
-const colorVerification = () => {
-    const lineArray = getActiveLineArray();
-    const attemptWord = getCurrentWordArray();
+const greenLetters = () => {
     for(let i = 0; i < 5; i++) {
         if(attemptWord[i] == word[i]) {
+            wordColors[i] = 'G';
+            wordClone[i] = '0';
+        }
+    }
+}
+const yellowLetters = () => {
+    for(let i = 0; i < 5; i++) {
+        if(wordClone.includes(attemptWord[i]) && wordColors[i] != 'G') {
+            wordColors[i] = 'Y';
+            wordClone[wordClone.indexOf(attemptWord[i])] = '0';
+        }
+    }
+}
+const blackLetters = () => {
+    for(let i = 0; i < 5; i++) {
+        if(wordColors[i] != 'G' && wordColors[i] != 'Y') {
+            wordColors[i] = 'B';
+        }
+    }
+}
+
+const colorVerification = () => {
+    wordClone = [...word];
+    lineArray = getActiveLineArray();
+    attemptWord = getCurrentWordArray();
+    greenLetters();
+    yellowLetters();
+    blackLetters();
+    for(let i = 0; i < 5; i++) {
+        if(wordColors[i] == 'G') {
             lineArray[i].classList.add('green');
             document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('green');
-        } else if(word.includes(attemptWord[i])) {
+        }
+        if(wordColors[i] == 'Y') {
             lineArray[i].classList.add('yellow');
             document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('yellow');
-        } else {
+        }
+        if(wordColors[i] == 'B') {
             lineArray[i].classList.add('black');
             document.querySelector(`#kbd_${attemptWord[i].toLowerCase()}`).classList.add('black');
         }
     }
+    wordColors = []; 
 }
+
+// --------------------------------------------------------------------------
+
+// Submit Word Attempt
+
+let attemptCounter = 0;
+
 const validWordAttempt = (attempt) => {
     return dictionary.includes(attempt);
 }
@@ -247,14 +296,6 @@ const checkWin = (attempt) => {
         }
     }
     return win;
-}
-const getCurrentWordArray = () => {
-    let lineSelected = getActiveLineArray();
-    const currentWord = [];
-    for(let i = 0; i < lineSelected.length; i++){
-        currentWord[i] = lineSelected[i].innerHTML;
-    }
-    return currentWord;
 }
 const submitWordAttempt = () => {
     const attempt = getCurrentWordArray();
