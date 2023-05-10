@@ -16,7 +16,7 @@ A cada acesso é possível jogar uma nova palavra, e não apenas uma por dia, co
 </div>
 
 ### Execução
-Para acessar o projeto basta acessar o link 🔗[MyWordle](https://gabriel-piva.github.io/myWordle/) gerado com o [Github Pages](https://pages.github.com/) ou clonar o repositório e abrir o arquivo `index.html` em algum servidor web.
+Para acessar o projeto basta acessar o link [🔗MyWordle](https://gabriel-piva.github.io/myWordle/) gerado com o [Github Pages](https://pages.github.com/) ou clonar o repositório e abrir o arquivo `index.html` em algum servidor web.
 
 ### Objetivo
 O projeto tinha como objetivo principal o estudo e prática de HTML, CSS e JavaScript, focando na leitura do teclado para a escrita das palavras, na construção dos elementos e do teclado na tela de forma inteiramente responsiva, nas animações e a movimentação entre as casas das palavras, no uso do Local Storage para salvar o histórico dos jogos e na própria lógica do jogo em si.
