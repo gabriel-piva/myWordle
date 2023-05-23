@@ -16,11 +16,11 @@ A cada acesso é possível jogar uma nova palavra, e não apenas uma por dia, co
 </div>
 
 ### Execução
-Para executar o projeto bastar clonar o repositório com o link abaixo:
+Para executar o projeto basta clonar o repositório com o link abaixo:
 ```bash
 git clone https://github.com/gabriel-piva/myWordle.git
 ```
-Depois, basta navegar até a pasta e abrir o arquivo `index.html` em algum servidor web.
+Depois, navegue até a pasta e abra o arquivo `index.html` em algum servidor web.
 
 Também é possível acessar o jogo com o link [🔗MyWordle](https://gabriel-piva.github.io/myWordle/) gerado com o [Github Pages](https://pages.github.com/).
 
