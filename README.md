@@ -1,4 +1,4 @@
-## MyWordle
+## MyWordle <img src="images/favicon.ico" width="19px">
 
 É um jogo inspirado pelos jogos [Termo](https://term.ooo/) e [Wordle](https://www.nytimes.com/games/wordle/index.html), porém com algumas modificações. Nele, o objetivo é adivinhar uma palavra de 5 letras, em inglês, dando palpites com outras palavras, com 6 tentativas ao máximo. 
 
@@ -6,7 +6,7 @@ A cada palavra inserida, as letras recebem uma cor. Quando uma letra pertence à
 
 A cada acesso é possível jogar uma nova palavra, e não apenas uma por dia, como nos jogos originais, ou seja, pode-se jogar várias vezes seguidas. Além disso, após descobrir a palavra, é possível acessar um link para ver diretamente a tradução do termo em inglês, utilizando o [Google Translate](https://translate.google.com.br/?hl=pt-BR). Assim, a cada nova palavra descoberta é possível ver suas possíveis traduções.
 
-<img src="./images/myWordle.png" width="85%" alt="myWordle">
+<img src="images/myWordle.png" width="85%" alt="myWordle">
 
 ### Tecnologias 
 <div style="display: flex; gap: 5px;">
@@ -16,13 +16,13 @@ A cada acesso é possível jogar uma nova palavra, e não apenas uma por dia, co
 </div>
 
 ### Execução
-Para acessar o projeto basta acessar o link [🔗MyWordle](https://gabriel-piva.github.io/myWordle/) gerado com o [Github Pages](https://pages.github.com/) ou clonar o repositório e abrir o arquivo `index.html` em algum servidor web.
+Para executar o projeto bastar clonar o repositório com o link abaixo:
 ```bash
 git clone https://github.com/gabriel-piva/myWordle.git
 ```
+Depois, basta navegar até a pasta e abrir o arquivo `index.html` em algum servidor web.
 
-### Objetivo
-O projeto tinha como objetivo principal o estudo e prática de HTML, CSS e JavaScript, focando na construção dos campos do jogo e teclado na tela de forma responsiva, na leitura do teclado para a escrita das tentativas, na movimentação entre as casas das palavras, no uso do Local Storage para salvar o histórico dos jogos e na própria lógica do jogo em si.
+Também é possível acessar o jogo com o link [🔗MyWordle](https://gabriel-piva.github.io/myWordle/) gerado com o [Github Pages](https://pages.github.com/).
 
 ### Referências
 O ícone da página vem do [Icon-Icons](https://icon-icons.com/pt/icone/palavra-mac/23563), a biblioteca de ícones é a [Boxicons](https://boxicons.com/) e a fonte vem do [Google Fonts](https://fonts.google.com/specimen/Varela+Round). O banco de palavras aceitas e as palavras que podem ser sorteadas vem do canal [Web Dev Simplified](https://github.com/WebDevSimplified/wordle-clone).
